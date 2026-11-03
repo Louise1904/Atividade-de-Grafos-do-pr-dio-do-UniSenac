@@ -6,7 +6,7 @@ Mapeamos o prédio a partir do LabTec, que é o ponto zero: cada porta é um nó
 
 Integrantes
 Louise Vahal
-Eduardo Hafeli
+Eduardo Hafele Maia
 
 Unidade do peso - Passos
 
