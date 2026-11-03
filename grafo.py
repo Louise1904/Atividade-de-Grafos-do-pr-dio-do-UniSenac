@@ -1,6 +1,5 @@
 from collections import deque
 
-
 def carregar_grafo(caminho):
     # dicionário: chave = porta, valor = lista de (vizinho, peso)
     grafo = {}
@@ -16,11 +15,9 @@ def carregar_grafo(caminho):
             grafo.setdefault(b, []).append((a, peso))
     return grafo
 
-
 def contar_arestas(grafo):
     # cada aresta aparece duas vezes (ida e volta), por isso divide por 2
     return sum(len(v) for v in grafo.values()) // 2
-
 
 def alcancaveis(grafo, origem):
     # BFS simples só para conferir se todas as portas são alcançadas
@@ -33,7 +30,6 @@ def alcancaveis(grafo, origem):
                 visitados.add(vizinho)
                 fila.append(vizinho)
     return visitados
-
 
 if __name__ == "__main__":
     grafo = carregar_grafo("arestas.txt")
