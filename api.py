@@ -61,7 +61,7 @@ def rota(origem: str, destino: str, algoritmo: str = "dijkstra"):
 
 @app.get("/comparar")
 def comparar(origem: str, destino: str):
-    # os quatro algoritmos lado a lado
+    # os quatro algoritmos lado a lado para comparar
     origem = conferir_porta(origem)
     destino = conferir_porta(destino)
     return [executar(nome, origem, destino) for nome in ALGORITMOS]
