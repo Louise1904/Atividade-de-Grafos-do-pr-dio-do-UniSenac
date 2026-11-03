@@ -2,7 +2,7 @@ from collections import deque
 
 
 def carregar_grafo(caminho):
-    # @unisenac dicionário: chave = porta, valor = lista de (vizinho, peso)
+    # dicionário: chave = porta, valor = lista de (vizinho, peso)
     grafo = {}
     with open(caminho, encoding="utf-8") as arq:
         for linha in arq:
@@ -11,19 +11,19 @@ def carregar_grafo(caminho):
                 continue
             a, b, peso = linha.split()
             peso = int(peso)
-            # @unisenac cada linha gera duas entradas: anda-se nos dois sentidos
+            # cada linha gera duas entradas: anda-se nos dois sentidos
             grafo.setdefault(a, []).append((b, peso))
             grafo.setdefault(b, []).append((a, peso))
     return grafo
 
 
 def contar_arestas(grafo):
-    # @unisenac cada aresta aparece duas vezes (ida e volta), por isso divide por 2
+    # cada aresta aparece duas vezes (ida e volta), por isso divide por 2
     return sum(len(v) for v in grafo.values()) // 2
 
 
 def alcancaveis(grafo, origem):
-    # @unisenac BFS simples só para conferir se todas as portas são alcançadas
+    # BFS simples só para conferir se todas as portas são alcançadas
     visitados = {origem}
     fila = deque([origem])
     while fila:
