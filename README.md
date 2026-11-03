@@ -6,7 +6,9 @@ Mapeamos o prédio a partir do LabTec, que é o ponto zero: cada porta é um nó
 
 Integrantes
 Louise Vahal
-Unidade do peso
+Eduardo Hafeli
+
+Unidade do peso - Passos
 
 Todos os pesos estão em passos. Cada peso é a distância só entre duas portas vizinhas, e não a distância acumulada desde o LabTec.
 
